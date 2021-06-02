@@ -12,6 +12,8 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseEvent;
 
 public class Inicio extends JFrame {
 
@@ -42,6 +44,11 @@ public class Inicio extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addMouseMotionListener(new MouseMotionAdapter() {
+			@Override
+			public void mouseMoved(MouseEvent e) {
+			}
+		});
 		btnNewButton.setForeground(Color.YELLOW);
 		btnNewButton.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
 		btnNewButton.setBackground(Color.LIGHT_GRAY);
@@ -49,8 +56,9 @@ public class Inicio extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnRegister = new JButton("Register");
+		btnRegister.setForeground(Color.YELLOW);
 		btnRegister.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
-		btnRegister.setBackground(new Color(255, 255, 0));
+		btnRegister.setBackground(Color.LIGHT_GRAY);
 		btnRegister.setBounds(246, 138, 104, 41);
 		contentPane.add(btnRegister);
 		
