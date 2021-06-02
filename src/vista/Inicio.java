@@ -28,29 +28,29 @@ public class Inicio extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Bienvenido");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 18));
-		lblNewLabel.setBounds(24, 29, 190, 59);
-		contentPane.add(lblNewLabel);
+		JLabel lblLabelBienvenido = new JLabel("Bienvenido");
+		lblLabelBienvenido.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLabelBienvenido.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 18));
+		lblLabelBienvenido.setBounds(24, 29, 190, 59);
+		contentPane.add(lblLabelBienvenido);
 		
-		JLabel lblNewLabel_1 = new JLabel("A Tu Login");
-		lblNewLabel_1.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 18));
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(204, 48, 190, 59);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblLabelLogin = new JLabel("A Tu Login");
+		lblLabelLogin.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 18));
+		lblLabelLogin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLabelLogin.setBounds(204, 48, 190, 59);
+		contentPane.add(lblLabelLogin);
 		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.addMouseMotionListener(new MouseMotionAdapter() {
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseMoved(MouseEvent e) {
 			}
 		});
-		btnNewButton.setForeground(Color.YELLOW);
-		btnNewButton.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
-		btnNewButton.setBackground(Color.LIGHT_GRAY);
-		btnNewButton.setBounds(65, 138, 104, 41);
-		contentPane.add(btnNewButton);
+		btnLogin.setForeground(Color.YELLOW);
+		btnLogin.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
+		btnLogin.setBackground(Color.LIGHT_GRAY);
+		btnLogin.setBounds(65, 138, 104, 41);
+		contentPane.add(btnLogin);
 		
 		JButton btnRegister = new JButton("Register");
 		btnRegister.setForeground(Color.YELLOW);
