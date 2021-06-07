@@ -10,7 +10,7 @@ public class Arma {
     private int municion;
     private String nacionalidad;
     private String usuario;
-	private String contraseña;
+	private String contrasena;
     
     public String getTipo() {
         return tipo;
@@ -54,10 +54,10 @@ public class Arma {
     public void setUsuario(String Usuario) {
     	this.usuario = Usuario;
     }
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 }
