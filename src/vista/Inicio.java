@@ -21,6 +21,7 @@ public class Inicio extends JFrame {
 		setBounds(100, 100, 450, 300);
 		
 		/* Crear y ascociar panel al frame*/
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 204, 204));
 		contentPane.setForeground(Color.BLUE);
