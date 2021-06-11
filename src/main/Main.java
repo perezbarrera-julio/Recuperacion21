@@ -4,6 +4,7 @@ import bbdd.conexion;
 import vista.Inicio;
 import vista.Login;
 import vista.Register;
+import vista.Tabla;
 
 public class Main {
 
@@ -11,8 +12,6 @@ public class Main {
 
 		conexion.Conectar();
 		new Inicio();
-		new Login();
-		new Register();
 		
 	}
 
