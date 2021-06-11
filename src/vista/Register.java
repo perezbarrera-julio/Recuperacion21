@@ -5,6 +5,9 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.Central;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
@@ -13,6 +16,9 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Register extends JFrame {
 
@@ -25,7 +31,7 @@ public class Register extends JFrame {
 	 * Create the frame.
 	 */
 	public Register() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -33,19 +39,19 @@ public class Register extends JFrame {
 		contentPane.setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(125, 30, 130, 20);
+		textField.setBounds(107, 30, 130, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Hombre ");
-		chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		chckbxNewCheckBox.setBounds(301, 127, 97, 35);
-		contentPane.add(chckbxNewCheckBox);
+		JCheckBox chckbxHombre = new JCheckBox("Hombre ");
+		chckbxHombre.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		chckbxHombre.setBounds(184, 179, 97, 35);
+		contentPane.add(chckbxHombre);
 		
-		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Mujer");
-		chckbxNewCheckBox_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		chckbxNewCheckBox_1.setBounds(301, 179, 97, 35);
-		contentPane.add(chckbxNewCheckBox_1);
+		JCheckBox chckbxMujer = new JCheckBox("Mujer");
+		chckbxMujer.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		chckbxMujer.setBounds(306, 179, 97, 35);
+		contentPane.add(chckbxMujer);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 17));
@@ -53,12 +59,12 @@ public class Register extends JFrame {
 		lblUsuario.setToolTipText("");
 		lblUsuario.setBackground(Color.WHITE);
 		lblUsuario.setForeground(new Color(255, 255, 102));
-		lblUsuario.setBounds(23, 30, 92, 20);
+		lblUsuario.setBounds(10, 27, 92, 20);
 		contentPane.add(lblUsuario);
 		
 		passwordField = new JPasswordField();
 		passwordField.setToolTipText("");
-		passwordField.setBounds(125, 61, 170, 20);
+		passwordField.setBounds(107, 61, 130, 20);
 		contentPane.add(passwordField);
 		
 		JLabel lblPassW = new JLabel("Contraseña");
@@ -67,13 +73,18 @@ public class Register extends JFrame {
 		lblPassW.setForeground(new Color(255, 255, 102));
 		lblPassW.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblPassW.setBackground(Color.WHITE);
-		lblPassW.setBounds(23, 61, 92, 20);
+		lblPassW.setBounds(10, 58, 92, 20);
 		contentPane.add(lblPassW);
 		
 		JLabel lblFotoDedo = new JLabel("");
 		lblFotoDedo.setIcon(new ImageIcon("C:\\Proyecto\\ADAITS\\Programaci\u00F3n\\Proyecto-MVC\\Imag\\DeditoArriba.png"));
 		lblFotoDedo.setBounds(-37, 103, 186, 158);
 		contentPane.add(lblFotoDedo);
+		
+		JButton btnNewButton = new JButton("Registrarse");
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton.setBounds(282, 88, 121, 41);
+		contentPane.add(btnNewButton);
 		
 		JLabel lblFondo = new JLabel("");
 		lblFondo.setIcon(new ImageIcon("C:\\Proyecto\\ADAITS\\Programaci\u00F3n\\ProyectoEclipse\\Proyecto\\Imag\\Fondoatras.png"));
@@ -83,5 +94,12 @@ public class Register extends JFrame {
 		/* Hacer visible el boton  */
 		
 		setVisible(true);
+
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Central().abrirLogin();
+				dispose();
+			}
+		});
 	}
 }
