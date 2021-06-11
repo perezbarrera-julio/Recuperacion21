@@ -3,6 +3,9 @@ package vista;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.Central;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -11,6 +14,8 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Inicio extends JFrame {
 
@@ -42,11 +47,6 @@ public class Inicio extends JFrame {
 		contentPane.add(lblLabelLogin);
 		
 		JButton btnLogin = new JButton("Login");
-		btnLogin.addMouseMotionListener(new MouseMotionAdapter() {
-			@Override
-			public void mouseMoved(MouseEvent e) {
-			}
-		});
 		btnLogin.setForeground(Color.YELLOW);
 		btnLogin.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
 		btnLogin.setBackground(Color.LIGHT_GRAY);
@@ -54,6 +54,7 @@ public class Inicio extends JFrame {
 		contentPane.add(btnLogin);
 		
 		JButton btnRegister = new JButton("Register");
+	
 		btnRegister.setForeground(Color.YELLOW);
 		btnRegister.setFont(new Font("Microsoft Yi Baiti", Font.BOLD, 19));
 		btnRegister.setBackground(Color.LIGHT_GRAY);
@@ -68,5 +69,29 @@ public class Inicio extends JFrame {
 		/* Boton */
 		
 		setVisible(true);
+		
+		
+		btnLogin.addMouseMotionListener(new MouseMotionAdapter() {
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				
+			}
+		});
+		
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Central().abrirLogin();
+				dispose();
+			}
+		});
+	
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Central().abrirRegister();
+				dispose();
+			}
+		});
+	
+	
 	}
 }
