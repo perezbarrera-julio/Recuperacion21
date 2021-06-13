@@ -81,10 +81,10 @@ public class Register extends JFrame {
 		lblFotoDedo.setBounds(-37, 103, 186, 158);
 		contentPane.add(lblFotoDedo);
 		
-		JButton btnNewButton = new JButton("Registrarse");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton.setBounds(282, 88, 121, 41);
-		contentPane.add(btnNewButton);
+		JButton btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnRegistrarse.setBounds(282, 88, 121, 41);
+		contentPane.add(btnRegistrarse);
 		
 		JLabel lblFondo = new JLabel("");
 		lblFondo.setIcon(new ImageIcon("C:\\Proyecto\\ADAITS\\Programaci\u00F3n\\ProyectoEclipse\\Proyecto\\Imag\\Fondoatras.png"));
@@ -95,7 +95,7 @@ public class Register extends JFrame {
 		
 		setVisible(true);
 
-		btnNewButton.addActionListener(new ActionListener() {
+		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Central().abrirLogin();
 				dispose();
