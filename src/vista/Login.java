@@ -75,8 +75,8 @@ public class Login extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Proyecto\\ADAITS\\Programaci\u00F3n\\Proyecto-MVC\\Imag\\image-removebg-preview (6).png"));
-		lblNewLabel.setBounds(50, 112, 171, 138);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Proyecto\\ADAITS\\Programaci\u00F3n\\Proyecto-MVC\\Imag\\DeditoArriba.png"));
+		lblNewLabel.setBounds(26, 98, 177, 152);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblFondo = new JLabel("");
@@ -91,6 +91,7 @@ public class Login extends JFrame {
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Central().abrirTabla();
+				dispose();
 			}
 		});
 	}
